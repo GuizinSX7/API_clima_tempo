@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API clima e tempo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API clima e tempo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div class="preloader">
-    <div class="loader-container">
-      <div class="text">
-        <h1>Carregando...</h1>
-      </div>
-      <div class="loading">
-        <div class="line-box">
-          <div class="line"></div>
-        </div>
-      </div>
+  <body>
+    <div class="climeostil">
+      <h1 id="climeos">Clime<i class="fa-solid fa-earth-americas" id="icon"></i>s</h1>
     </div>
-  </div>
-  
-  <h1>Consulta do clima tempo</h1>
+    <form id="formClima" class="input-group mb-3">
+      <input
+        type="text"
+        id="cityInput"
+        class="form-control"
+        placeholder="Cidade"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </form>
 
-  <form id="formClima">
-    <label for="cityInput">Cidade:</label>
-    <input type="text" id="cityInput" name="cityInput" />
-    <button type="submit">Consultar</button>
-  </form>
+    <div id="climaResult">
+      
+    </div>
 
-  <div id="climaResult"></div>
+    <script>
+      document
+        .getElementById("formClima")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-  <script>
-    $(window).load(function() { // Garante que todo o site seja carregado
-      $('.loader-container').fadeOut(); // primeiro desaparecerá a animação de carregamento
-      $('.preloader').delay(350).fadeOut('slow'); // desaparecerá o DIV branco que cobre o site.
-      $('body').delay(350).css({'overflow':'visible'});
-    })
+          const city = document.getElementById("cityInput").value;
 
-    document.getElementById('formClima').addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      const city = document.getElementById('cityInput').value;
-
-      fetch(`http://localhost:7777/climatempo/${city}`)
-        .then(response => response.json())
-        .then((data) => {
-          const tempoResult = document.getElementById('climaResult');
-          if (data.Temperatura) {
-            tempoResult.innerHTML = `Temperatura: ${data.Temperatura}ºC <br>
+          fetch(`http://localhost:7777/climatempo/${city}`)
+            .then((response) => response.json())
+            .then((data) => {
+              const tempoResult = document.getElementById("climaResult");
+              if (data.Temperatura) {
+                  tempoResult.innerHTML = `Temperatura: ${data.Temperatura}ºC <br>
                   Umidade: ${data.Umidade}% <br>
                   Velocidade do vento: ${data.VelocidadeDoVento}m/s <br>
                   Descrição do clima: ${data.Clima}`;
-          } else {
-            tempoResult.innerHTML = "Erro ao obter dados metereológicos";
-          }
-        })
-        .catch(error => console.error("Erro ao obter dados"));
-    })
-  </script>
-</body>
+              } else {
+                tempoResult.innerHTML = "Erro ao obter dados metereológicos";
+              }
+            })
+            .catch((error) => console.error("Erro ao obter dados"));
+        });
+    </script>
+  </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 
+  <script src="https://kit.fontawesome.com/7fc24fef46.js" crossorigin="anonymous"></script>
 </html>
