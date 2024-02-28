@@ -1,4 +1,19 @@
-*{
+* {
     margin: 0 auto;
     padding: 0;
+}
+
+#formClima {
+    min-width: 280;
+    max-width: 1920px;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover; 
 }
