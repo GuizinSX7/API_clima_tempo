@@ -10,14 +10,21 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" media="(max-width: 800px)" href="style.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
     <div class="climeostil">
-      <h1 id="climeos">Clime<i class="fa-solid fa-earth-americas" id="icon"></i>s</h1>
+      <h1 id="climeos">
+        Clime<i class="fa-solid fa-earth-americas" id="icon"></i>s
+      </h1>
     </div>
+    <div id="horario"></div>
     <form id="formClima" class="input-group mb-3">
       <input
         type="text"
@@ -29,9 +36,7 @@
       />
     </form>
 
-    <div id="climaResult">
-      
-    </div>
+    <div id="climaResult"></div>
 
     <script>
       document
@@ -46,7 +51,7 @@
             .then((data) => {
               const tempoResult = document.getElementById("climaResult");
               if (data.Temperatura) {
-                  tempoResult.innerHTML = `Temperatura: ${data.Temperatura}ºC <br>
+                tempoResult.innerHTML = `Temperatura: ${data.Temperatura}ºC <br>
                   Umidade: ${data.Umidade}% <br>
                   Velocidade do vento: ${data.VelocidadeDoVento}m/s <br>
                   Descrição do clima: ${data.Clima}`;
@@ -56,6 +61,25 @@
             })
             .catch((error) => console.error("Erro ao obter dados"));
         });
+
+        function atualizarHorario() {
+        var agora = new Date();
+        var hora = agora.getHours();
+        var minutos = agora.getMinutes();
+        var segundos = agora.getSeconds();
+        
+        hora = (hora < 10) ? "0" + hora : hora;
+        minutos = (minutos < 10) ? "0" + minutos : minutos;
+        segundos = (segundos < 10) ? "0" + segundos : segundos;
+        
+        var horarioAtual = hora + ":" + minutos;
+        
+        document.getElementById("horario").innerHTML = horarioAtual;
+      }
+
+      setInterval(atualizarHorario, 1000);
+
+      atualizarHorario();
     </script>
   </body>
 
@@ -65,5 +89,8 @@
     crossorigin="anonymous"
   ></script>
 
-  <script src="https://kit.fontawesome.com/7fc24fef46.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/7fc24fef46.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
