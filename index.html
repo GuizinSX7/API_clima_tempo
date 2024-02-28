@@ -11,6 +11,19 @@
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="loader-container">
+      <div class="text">
+        <h1>Carregando...</h1>
+      </div>
+      <div class="loading">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <h1>Consulta do clima tempo</h1>
 
   <form id="formClima">
@@ -22,6 +35,12 @@
   <div id="climaResult"></div>
 
   <script>
+    $(window).load(function() { // Garante que todo o site seja carregado
+      $('.loader-container').fadeOut(); // primeiro desaparecerá a animação de carregamento
+      $('.preloader').delay(350).fadeOut('slow'); // desaparecerá o DIV branco que cobre o site.
+      $('body').delay(350).css({'overflow':'visible'});
+    })
+
     document.getElementById('formClima').addEventListener('submit', function (event) {
       event.preventDefault();
 
