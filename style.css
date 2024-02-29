@@ -17,7 +17,7 @@ body{
     border: 2px solid black;
     border-radius: 20px;
     position: absolute;
-    margin-top: 23%;
+    margin-top: 1px;
     margin-left: 24.3%;
 }
 
@@ -36,66 +36,70 @@ body{
 }
 
 #climaResult{
-    position: relative;
-    position: absolute;
-    margin-left: 16.9%;
-    margin-top: 30%;
+    margin: 50px auto;
+    display: flex;
     background-color: #8b9da25d;
     border: 5px solid rgba(0, 0, 0, 0.436);
     border-radius: 20px;
     width: 65%;
-    height: 700%;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #horario{
     font-family: 'Codec Pro', sans-serif;
     font-size: 125px;
-    position: absolute;
-    top: 100%;
-    left: 39%;
 }
 
 #velocidadedoventoid{
     font-family: 'Codec Pro', sans-serif;
     font-size: 30px;
-    position: absolute;
-    left: 72.5%;
-    top: 37.5%;
+
 }
 
 #ventoicon{
-    position: absolute;
-    left: 83%;
-    top: 24%;
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 30px;
 }
 
 #umidadeicon{
-    position: absolute;
-    left: 48%;
-    top: 25%;
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 30px;
 }
 
 #umidadeid{
-    position: absolute;
+   
     font-family: 'Codec Pro', sans-serif;
     font-size: 30px;
-    left: 43%;
-    top: 39%;
 }
 
-#temperaturaicon{
-    position: absolute;
-    top: 25%;
-    left: 20%;
-}
+
 
 #temperaturaid{
-    position: absolute;
     font-family: 'Codec Pro', sans-serif;
     font-size: 30px;
-    top: 39%;
-    left: 12%;
+    
 }
+
+#climaid{
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 50px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+
 
 /* @media (max-width: 1356px) {
 
@@ -116,3 +120,4 @@ body{
         h
     }
 } */
+

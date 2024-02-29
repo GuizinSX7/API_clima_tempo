@@ -12,7 +12,7 @@ document
     fetch(`http://localhost:7777/climatempo/${city}`)
       .then((response) => response.json())
       .then((data) => {
-        const tempoResult = document.getElementById("climaResult");
+        const tempoResult = document.getElementById("climaResult", "climeostil");
         if (data.Temperatura) {
         //   tempoResult.innerHTML = `${temperaturaid.innerText} ${data.Temperatura}ºC <br>
         //           ${umidadeid.innerText} ${data.Umidade}% <br>

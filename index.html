@@ -24,7 +24,15 @@
         Clime<i class="fa-solid fa-earth-americas" id="icon"></i>s
       </h1>
     </div>
-    <div id="horario"></div>
+
+    <div class="conteudo">
+      <div id="horario"></div>
+
+      <div id="climades">
+        <p id="climaid"></p>
+      </div>
+    </div>
+
     <form id="formClima" class="input-group mb-3">
       <input
         type="text"
@@ -37,23 +45,39 @@
     </form>
 
     <div id="climaResult">
+
       <div class="cidade">
         <p id="city"></p>
       </div>
-      <div id="temperatura">
+
+      <div id="temperatura" class="icons">
         <p id="temperaturaid"></p>
-        <img id="temperaturaicon" src="./img/temperatura.png" alt="termometro.png" width="100px">
+        <img
+          id="temperaturaicon"
+          src="./img/temperatura.png"
+          alt="termometro.png"
+          width="100px"
+        />
       </div>
-      <div id="umidade">
+
+      <div id="umidade" class="icons">
         <p id="umidadeid"></p>
-        <img id="umidadeicon" src="./img/umidade.png" alt="umidade.png" width="100px">
+        <img
+          id="umidadeicon"
+          src="./img/umidade.png"
+          alt="umidade.png"
+          width="100px"
+        />
       </div>
-      <div id="velocidadedovento">
+      
+      <div id="velocidadedovento class="icons"">
         <p id="velocidadedoventoid"></p>
-        <img id="ventoicon" src="./img/vento.png" alt="vento.png" width="100px">
-      </div>
-      <div id="climades">
-        <p id="climaid"></p>
+        <img
+          id="ventoicon"
+          src="./img/vento.png"
+          alt="vento.png"
+          width="100px"
+        />
       </div>
     </div>
   </body>
@@ -70,5 +94,4 @@
   ></script>
 
   <script src="script.js"></script>
-
 </html>
