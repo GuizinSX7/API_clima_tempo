@@ -36,51 +36,24 @@
       />
     </form>
 
-    <div id="climaResult"></div>
-
-    <script>
-      document
-        .getElementById("formClima")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const city = document.getElementById("cityInput").value;
-
-          fetch(`http://localhost:7777/climatempo/${city}`)
-            .then((response) => response.json())
-            .then((data) => {
-              const tempoResult = document.getElementById("climaResult");
-              if (data.Temperatura) {
-                tempoResult.innerHTML = `Temperatura: ${data.Temperatura}ºC <br>
-                  Umidade: ${data.Umidade}% <br>
-                  Velocidade do vento: ${data.VelocidadeDoVento}m/s <br>
-                  Descrição do clima: ${data.Clima}`;
-              } else {
-                tempoResult.innerHTML = "Erro ao obter dados metereológicos";
-              }
-            })
-            .catch((error) => console.error("Erro ao obter dados"));
-        });
-
-        function atualizarHorario() {
-        var agora = new Date();
-        var hora = agora.getHours();
-        var minutos = agora.getMinutes();
-        var segundos = agora.getSeconds();
-        
-        hora = (hora < 10) ? "0" + hora : hora;
-        minutos = (minutos < 10) ? "0" + minutos : minutos;
-        segundos = (segundos < 10) ? "0" + segundos : segundos;
-        
-        var horarioAtual = hora + ":" + minutos;
-        
-        document.getElementById("horario").innerHTML = horarioAtual;
-      }
-
-      setInterval(atualizarHorario, 1000);
-
-      atualizarHorario();
-    </script>
+    <div id="climaResult">
+      <div class="cidade">
+        <p id="city"></p>
+      </div>
+      <div id="temperatura">
+        <p id="temperaturaid"></p>
+      </div>
+      <div id="umidade">
+        <p id="umidadeid"></p>
+      </div>
+      <div id="velocidadedovento">
+        <p id="velocidadedoventoid"></p>
+        <img id="ventoicon" src="./img/vento.png" alt="vento.png" width="100px">
+      </div>
+      <div id="climades">
+        <p id="climaid"></p>
+      </div>
+    </div>
   </body>
 
   <script
@@ -93,4 +66,7 @@
     src="https://kit.fontawesome.com/7fc24fef46.js"
     crossorigin="anonymous"
   ></script>
+
+  <script src="script.js"></script>
+
 </html>

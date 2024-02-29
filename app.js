@@ -83,7 +83,8 @@ const TraducaoClima = {
     "few clouds": "Poucas nuvens",
     "scattered clouds": "Nuvens dispersas",
     "broken clouds": "Nuvens fragmentadas",
-    "overcast clouds": "Nublado"
+    "overcast clouds": "Nublado",
+    "clear sky": "céu limpo"
   };
 
 app.get('/climatempo/:cidade', async(req, res) => {
