@@ -69,6 +69,34 @@ body{
     top: 24%;
 }
 
+#umidadeicon{
+    position: absolute;
+    left: 48%;
+    top: 25%;
+}
+
+#umidadeid{
+    position: absolute;
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 30px;
+    left: 43%;
+    top: 39%;
+}
+
+#temperaturaicon{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+#temperaturaid{
+    position: absolute;
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 30px;
+    top: 39%;
+    left: 12%;
+}
+
 /* @media (max-width: 1356px) {
 
     #formClima {
