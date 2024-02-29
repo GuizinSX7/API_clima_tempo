@@ -17,13 +17,13 @@ body{
     width: 100%;
     min-width: 280;
     max-width: 1920px;
-    width: 35%;
+    width: 50%;
     margin-top: 10%;
     border: 2px solid black;
     border-radius: 20px;
     position: absolute;
     margin-top: 23%;
-    margin-left: 20%;
+    margin-left: 25.3%;
 }
 
 #cityInput{
@@ -42,21 +42,21 @@ body{
 
 #climaResult{
     position: absolute;
-    margin-left: 65%;
-    margin-top: 3%;
+    margin-left: 18%;
+    margin-top: 30%;
     background-color: #8b9da25d;
-    border: 2px solid black;
+    border: 5px solid rgba(0, 0, 0, 0.436);
     border-radius: 20px;
-    width: 27%;
-    height: 1800%;
+    width: 65%;
+    height: 700%;
 }
 
 #horario{
     font-family: 'Codec Pro', sans-serif;
-    font-size: 100px;
+    font-size: 125px;
     position: absolute;
-    top: 600%;
-    left: 29%;
+    top: 100%;
+    left: 42%;
 }
 
 /* @media (max-width: 1356px) {
