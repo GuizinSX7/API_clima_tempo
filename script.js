@@ -2,6 +2,7 @@
 // const umidadeid = document.getElementById("umidadeid");
 // const velocidadedoventoid = document.getElementById("velocidadedoventoid");
 // const climadesid = document.getElementById("climadesid");
+
 document
   .getElementById("formClima")
   .addEventListener("submit", function (event) {
@@ -18,7 +19,7 @@ document
         //           ${umidadeid.innerText} ${data.Umidade}% <br>
         //           ${velocidadedoventoid.innerText} ${data.VelocidadeDoVento}m/s <br>
         //           ${climadesid.innerText} ${data.Clima}`;
-        document.getElementById("city").textContent = `${data.Cidade}`;
+        document.getElementById("city").textContent = data.Cidade.charAt(0).toUpperCase() + data.Cidade.slice(1);
         document.getElementById("temperaturaid").textContent = `${data.Temperatura}ºC`;
         document.getElementById("umidadeid").textContent = `${data.Umidade}`;
         document.getElementById("velocidadedoventoid").textContent = `${data.VelocidadeDoVento}m/s`;
