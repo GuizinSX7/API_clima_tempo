@@ -47,7 +47,7 @@ body{
     border: 5px solid rgba(0, 0, 0, 0.436);
     border-radius: 20px;
     width: 60%;
-    height: 300px;
+    height: 200px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -74,7 +74,6 @@ body{
 }
 
 #umidadeid{
-   
     font-family: 'Codec Pro', sans-serif;
     font-size: 30px;
 }
@@ -107,6 +106,14 @@ body{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+}
+
+#city{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 30px;
 }
 
 /* #climades{

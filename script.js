@@ -18,10 +18,11 @@ document
         //           ${umidadeid.innerText} ${data.Umidade}% <br>
         //           ${velocidadedoventoid.innerText} ${data.VelocidadeDoVento}m/s <br>
         //           ${climadesid.innerText} ${data.Clima}`;
+        document.getElementById("city").textContent = `${data.Cidade}`;
         document.getElementById("temperaturaid").textContent = `${data.Temperatura}ºC`;
         document.getElementById("umidadeid").textContent = `${data.Umidade}`;
         document.getElementById("velocidadedoventoid").textContent = `${data.VelocidadeDoVento}m/s`;
-        document.getElementById("climaid").textContent = `${data.Clima}`
+        document.getElementById("climaid").textContent = `${data.Clima}`;
         } else {
           tempoResult.innerHTML = "Erro ao obter dados metereológicos";
         }

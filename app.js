@@ -96,6 +96,7 @@ app.get('/climatempo/:cidade', async(req, res) => {
             const clima = TraducaoClima[response.data.weather[0].description] || response.data.weather[0].description;
 
             const weatherData = {
+                Cidade: req.params.cidade,
                 Temperatura: response.data.main.temp,
                 Umidade: response.data.main.humidity,
                 VelocidadeDoVento: response.data.wind.speed,
