@@ -11,16 +11,16 @@ body{
     background-position: center 20%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100%; 
 }
 
-#umidade{
+/* #umidade{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+ */
+ 
 #formClima{
     display: flex;
     min-width: 280px;
@@ -52,10 +52,11 @@ body{
     background-color: #8b9da25d;
     border: 5px solid rgba(0, 0, 0, 0.436);
     border-radius: 20px;
-    width: 60%;
+    width: 70%;
     height: 200px;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #horario{
@@ -67,16 +68,6 @@ body{
     font-family: 'Codec Pro', sans-serif;
     font-size: 30px;
 
-}
-
-#ventoicon{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 30px;
-}
-
-#umidadeicon{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 30px;
 }
 
 #umidadeid{
@@ -102,10 +93,10 @@ body{
 }
 
 .icons{
-    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
 }
 
 .climaResultPai{
@@ -114,25 +105,34 @@ body{
     justify-content: center;
 }
 
+.icons-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
 #city{
     display: flex;
     text-align: center;
-    flex-wrap: wrap;
     font-family: 'Codec Pro', sans-serif;
     font-size: 30px;
+    padding: 0px 0px 20px 0px;
 }
 
 #cidade{
     display: flex;
 }
 
-.umidadeFilho{
-    display: block;
+.umidadeFilho {
+    display: flex;
     width: 60px;
+    align-items:center;
+    justify-content: space-around;   
 }
 
-.valornum{
-    display: flex;
+ .valornum{
+    padding: 8px;
 }
 
 /* #climades{

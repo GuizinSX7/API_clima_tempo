@@ -2,6 +2,7 @@
 // const umidadeid = document.getElementById("umidadeid");
 // const velocidadedoventoid = document.getElementById("velocidadedoventoid");
 // const climadesid = document.getElementById("climadesid");
+var icone = document.querySelector("#iconeFeito");
 
 document
   .getElementById("formClima")
@@ -15,15 +16,18 @@ document
       .then((data) => {
         const tempoResult = document.getElementById("climaResult", "climeostil");
         if (data.Temperatura) {
+        // document.getElementById("iconeFeito").setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
         //   tempoResult.innerHTML = `${temperaturaid.innerText} ${data.Temperatura}ºC <br>
         //           ${umidadeid.innerText} ${data.Umidade}% <br>
         //           ${velocidadedoventoid.innerText} ${data.VelocidadeDoVento}m/s <br>
-        //           ${climadesid.innerText} ${data.Clima}`;
+        //           ${climadesid.innerText} ${data.Clima}`;  
         document.getElementById("city").textContent = data.Cidade.charAt(0).toUpperCase() + data.Cidade.slice(1);
         document.getElementById("temperaturaid").textContent = `${data.Temperatura}ºC`;
-        document.getElementById("umidadeid").textContent = `${data.Umidade}`;
+        document.getElementById("umidadeid").textContent = data.Umidade;
         document.getElementById("velocidadedoventoid").textContent = `${data.VelocidadeDoVento}m/s`;
-        document.getElementById("climaid").textContent = `${data.Clima}`;
+        document.getElementById("climaid").textContent = data.Clima;
+        icone.setAttribute("src", `http://openweathermap.org/img/w/${response.data.weather[0].icon}.png`);
+        
         } else {
           tempoResult.innerHTML = "Erro ao obter dados metereológicos";
         }
