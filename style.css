@@ -135,6 +135,12 @@ body{
     padding: 8px;
 }
 
+#pais{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 15px;
+}
+
 /* #climades{
     display: flex;
 } */

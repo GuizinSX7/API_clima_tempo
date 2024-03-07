@@ -84,15 +84,16 @@ app.get('/climatempo/:cidade', async(req, res) => {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
         if (response.status === 200) {
             const clima = TraducaoClima[response.data.weather[0].description] || response.data.weather[0].description;
-            // const iconUrl = `http://openweathermap.org/img/w/${response.data.weather[0].icon}.png`;
+            const iconUrl = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`;
 
             const weatherData = {
                 Cidade: req.params.cidade,
+                Pais: response.data.sys.country,
                 Temperatura: response.data.main.temp,
                 Umidade: response.data.main.humidity,
                 VelocidadeDoVento: response.data.wind.speed,
-                Clima: clima
-                // iconUrl: iconUrl
+                Clima: clima,
+                iconUrl: iconUrl
             };
             res.send(weatherData);
         } else {

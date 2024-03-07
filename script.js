@@ -2,7 +2,6 @@
 // const umidadeid = document.getElementById("umidadeid");
 // const velocidadedoventoid = document.getElementById("velocidadedoventoid");
 // const climadesid = document.getElementById("climadesid");
-var icone = document.querySelector("#iconeFeito");
 
 document
   .getElementById("formClima")
@@ -16,6 +15,7 @@ document
       .then((data) => {
         const tempoResult = document.getElementById("climaResult", "climeostil");
         if (data.Temperatura) {
+        const imgUrl = `https://flagsapi.com/${data.Pais}/flat/64.png`;
         // document.getElementById("iconeFeito").setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
         //   tempoResult.innerHTML = `${temperaturaid.innerText} ${data.Temperatura}ºC <br>
         //           ${umidadeid.innerText} ${data.Umidade}% <br>
@@ -26,8 +26,8 @@ document
         document.getElementById("umidadeid").textContent = data.Umidade;
         document.getElementById("velocidadedoventoid").textContent = `${data.VelocidadeDoVento}m/s`;
         document.getElementById("climaid").textContent = data.Clima;
-        icone.setAttribute("src", `http://openweathermap.org/img/w/${response.data.weather[0].icon}.png`);
-        
+        document.getElementById("iconeFeito").src = data.iconUrl;
+        document.getElementById("pais-icon").src = imgUrl;
         } else {
           tempoResult.innerHTML = "Erro ao obter dados metereológicos";
         }
