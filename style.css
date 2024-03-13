@@ -10,7 +10,8 @@ body {
     background-size: 100vh;
     background-size: cover;
     background-repeat: no-repeat; */
-  background: url("./img/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg") no-repeat center center fixed;
+  background: url("./img/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg") no-repeat
+    center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -27,8 +28,6 @@ body {
 
 #formClima {
   display: flex;
-  min-width: 280px;
-  max-width: 1920px;
   width: 50%;
   border: 3px solid black;
   border-radius: 20px;
@@ -209,7 +208,12 @@ body {
   .pais-style {
     width: 35px;
   }
-  #formClima {
-    width: 30%;
+  #cityInput {
+    display: flex;
+    border-radius: 20px;
+    background-image: url("./img/WhatsApp_Image_2024-02-28_at_13.54.13-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 98%;
   }
 }
