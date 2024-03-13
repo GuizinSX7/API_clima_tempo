@@ -1,15 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    /* Serve para dar controle do tamanho exato da tela, deixando a div com o tamanho máxmo colocado manualmente. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Serve para dar controle do tamanho exato da tela, deixando a div com o tamanho máxmo colocado manualmente. */
 }
 
-body{
-    background-image: url('./img/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
+body {
+  /* background-image: url('./img/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
+    background-size: 100vh;
     background-size: cover;
+    background-repeat: no-repeat; */
+  background: url("./img/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* #umidade{
@@ -19,194 +24,192 @@ body{
     align-items: center;
 }
  */
- 
-#formClima{
-    display: flex;
-    min-width: 280px;
-    max-width: 1920px;
-    width: 50%;
-    border: 3px solid black;
-    border-radius: 20px; 
-    margin: 100px auto;
+
+#formClima {
+  display: flex;
+  min-width: 280px;
+  max-width: 1920px;
+  width: 50%;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 100px auto;
 }
 
-#cityInput{
-    display: flex;
-    border-radius: 20px;
-    background-image: url('./img/WhatsApp_Image_2024-02-28_at_13.54.13-removebg-preview.png');
-    background-repeat: no-repeat;
-    background-size: 32px;
-    background-position: 98%;
+#cityInput {
+  display: flex;
+  border-radius: 20px;
+  background-image: url("./img/WhatsApp_Image_2024-02-28_at_13.54.13-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: 98%;
 }
 
-#climeos{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 25px;
-    padding: 10px;
-    text-align: flex-end;
+#climeos {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  text-align: flex-end;
 }
 
-#climaResult{
-    display: flex;
-    /* margin: 200px auto; */
-    background-color: #8b9da25d;
-    border: 5px solid rgba(0, 0, 0, 0.436);
-    border-radius: 20px;
-    width: 70%;
-    height: 200px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#climaResult {
+  display: flex;
+  /* margin: 200px auto; */
+  background-color: #8b9da25d;
+  border: 5px solid rgba(0, 0, 0, 0.436);
+  border-radius: 20px;
+  width: 70%;
+  height: 150px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#horario{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 90px;
+#horario {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 90px;
 }
 
-#velocidadedoventoid{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 25px;
-
+#velocidadedoventoid {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 25px;
 }
 
-#umidadeid{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 25px;
+#umidadeid {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 25px;
 }
 
-#temperaturaid{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 25px;
-    
+#temperaturaid {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 25px;
 }
 
-#climaid{
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 40px;
+#climaid {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 40px;
 }
 
-#temperaturaicon{
-    width: 80px;
+#temperaturaicon {
+  width: 80px;
 }
 
-#ventoicon{
-    width: 80px;
+#ventoicon {
+  width: 80px;
 }
 
-#umidadeicon{
-    width: 80px;
+#umidadeicon {
+  width: 80px;
 }
 
-.conteudo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.icons{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 
-.climaResultPai{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+.climaResultPai {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
-.icons-card{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+.icons-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
-#city{
-    display: flex;
-    text-align: center;
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 25px;
-    padding: 0px 0px 20px 0px;
+#city {
+  display: flex;
+  text-align: center;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 25px;
+  padding: 0px 0px 20px 0px;
 }
 
-#cidade{
-    display: flex;
+#cidade {
+  display: flex;
 }
 
 .umidadeFilho {
-    display: flex;
-    width: 60px;
-    align-items:center;
-    justify-content: space-around;   
+  display: flex;
+  width: 60px;
+  align-items: center;
+  justify-content: space-around;
 }
 
- .valornum{
-    padding: 8px;
+.valornum {
+  padding: 8px;
 }
 
-#pais{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 0px 0px 15px;
+#pais {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 15px;
 }
 
-.icon-style{
-    width: 170px;
+.icon-style {
+  width: 170px;
 }
 
-.pais-style{
-    width: 50px;
+.pais-style {
+  width: 50px;
 }
-
 
 @media (max-width: 640px) {
-    #horario{
-        font-size: 50px;
-    }
-    .icon-style{
-        width: 90px;
-    }
-    #climaid{
-        font-size: 30px;
-    }
-    #climeos{
-        font-size:20px;
-    }
-    #temperaturaicon{
-        width: 35px;
-    }
-    
-    #ventoicon{
-        width: 35px;
-    }
-    
-    #umidadeicon{
-        width: 35px;
-    }
-    #velocidadedoventoid{
-        font-size: 15px;
-    
-    }
-    
-    #umidadeid{
-        font-size: 15px;
-    }
-    
-    #temperaturaid{
-        font-size: 15px;
-    }
-    #city{
-        display: flex;
-        text-align: center;
-        font-family: 'Codec Pro', sans-serif;
-        font-size: 18px;
-        padding: 0px 0px 20px 0px;
-    }
-    .pais-style{
-        width: 35px;
-    }
-    
+  #horario {
+    font-size: 50px;
+  }
+  .icon-style {
+    width: 90px;
+  }
+  #climaid {
+    font-size: 30px;
+  }
+  #climeos {
+    font-size: 20px;
+  }
+  #temperaturaicon {
+    width: 35px;
+  }
+
+  #ventoicon {
+    width: 35px;
+  }
+
+  #umidadeicon {
+    width: 35px;
+  }
+  #velocidadedoventoid {
+    font-size: 15px;
+  }
+
+  #umidadeid {
+    font-size: 15px;
+  }
+
+  #temperaturaid {
+    font-size: 15px;
+  }
+  #city {
+    display: flex;
+    text-align: center;
+    font-family: "Codec Pro", sans-serif;
+    font-size: 18px;
+    padding: 0px 0px 20px 0px;
+  }
+  .pais-style {
+    width: 35px;
+  }
+  #formClima {
+    width: 30%;
+  }
 }
